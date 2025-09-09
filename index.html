@@ -1,95 +1,82 @@
+
 <!DOCTYPE html>
 <html lang="lv">
 <head>
     <meta charset="UTF-8">
-    <title>JEMA CRM Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEMA CRM - Moderns Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <div class="top-bar">
-            <div class="logo">[CRM Logo]</div>
-            <nav>
-                <a href="#">Dashboard</a>
-                <a href="#">Kontakti</a>
-                <a href="#">Darījumi</a>
-                <a href="#">Analītika</a>
-                <a href="#">Uzstādījumi</a>
-                <a href="#">Profils</a>
-            </nav>
-        </div>
-    </header>
-    <main class="container">
-        <aside class="sidebar">
-            <ul>
-                <li>1. Klienti</li>
-                <li>2. Pārskats (Dashboard)</li>
-                <li>3. Mani uzdevumi</li>
-                <li>4. Zvani un tikšanās</li>
-                <li>5. Darījumi</li>
-                <li>6. Pārskati / Atskaites</li>
-                <li>7. Mārketings</li>
-            </ul>
+<body class="bg-gray-800 text-white font-sans">
+    <div class="flex h-screen">
+        <!-- Sānu navigācija -->
+        <aside class="w-64 bg-gray-900 p-4 flex flex-col justify-between">
+            <div>
+                <img src="img/logo.png" alt="JEMA Logo" class="w-32 mb-8">
+                <nav class="space-y-4 text-sm">
+                    <a href="#" class="block hover:text-green-400">Klienti</a>
+                    <a href="#" class="block text-green-400">Pārskats</a>
+                    <a href="#" class="block hover:text-green-400">Kontakti</a>
+                    <a href="#" class="block hover:text-green-400">Zvani uztksnēj</a>
+                    <a href="#" class="block hover:text-green-400">Darījumi</a>
+                    <a href="#" class="block hover:text-green-400">Pārskati</a>
+                    <a href="#" class="block hover:text-green-400">Atskaites</a>
+                    <a href="#" class="block hover:text-green-400">Marketings</a>
+                </nav>
+            </div>
         </aside>
-        <section class="main-panel">
-            <div class="kpi-row">
-                <div class="kpi">Apgrozījums €</div>
-                <div class="kpi">Margin %</div>
-                <div class="kpi">Tikšanās skaits</div>
-            </div>
-            <div class="graphs">
-                <div class="graph">[ Apgrozījuma līkne ]</div>
-                <div class="graph">[ Margin dinamika ]</div>
-            </div>
-            <div class="calendar-tasks">
-                <div class="calendar">
-                    <h4>Mini nedēļas kalendārs</h4>
-                    <p>P O T C Pk S Sv</p>
-                    <p>2 3 4 5 6 7 8</p>
-                    <p>● ○ ●</p>
+
+        <!-- Galvenais saturs -->
+        <main class="flex-1 p-6 overflow-y-auto">
+            <!-- Header -->
+            <header class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl font-semibold">Dashboard</h1>
+                <div class="flex space-x-2">
+                    <button class="bg-gray-700 p-2 rounded hover:bg-gray-600">📧</button>
+                    <button class="bg-gray-700 p-2 rounded hover:bg-gray-600">💬</button>
+                    <button class="bg-gray-700 p-2 rounded hover:bg-gray-600">📞</button>
+                    <button class="bg-gray-700 p-2 rounded hover:bg-gray-600">📅</button>
                 </div>
-                <div class="tasks">
-                    <h4>Nākamie uzdevumi:</h4>
-                    <ul>
-                        <li>🔴 Pabeigt atskaiti (31.08)</li>
-                        <li>🟡 Nosūtīt piedāvājumu (05.09)</li>
-                        <li>🟢 Sagatavot prezentāciju (20.09)</li>
-                        <li>🟢 Tikšanās ar klientu B (21.09)</li>
-                    </ul>
+            </header>
+
+            <!-- Statistika -->
+            <div class="grid grid-cols-3 gap-4 mb-6">
+                <div class="bg-green-900 p-4 rounded text-center">
+                    <div class="text-xl">Apgrozījums €</div>
+                    <div class="text-3xl font-bold">150 000</div>
+                </div>
+                <div class="bg-green-800 p-4 rounded text-center">
+                    <div class="text-xl">Margin %</div>
+                    <div class="text-3xl font-bold">24,5%</div>
+                </div>
+                <div class="bg-red-900 p-4 rounded text-center">
+                    <div class="text-xl">Tikšanās skaits</div>
+                    <div class="text-3xl font-bold">15</div>
                 </div>
             </div>
-            <div class="deals-table">
-                <h4>Plānotie darījumi</h4>
-                <table>
-                    <thead>
-                        <tr><th>Klients</th><th>Statuss</th><th>Summa</th><th>Termiņš</th><th>Progress</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>SIA Alfa</td><td>Pārskatē</td><td>5000€</td><td>01.09.</td><td>🔴 Nokavēts</td></tr>
-                        <tr><td>SIA Beta</td><td>Sarunās</td><td>8000€</td><td>05.09.</td><td>🟡 Steidzami</td></tr>
-                        <tr><td>SIA Gamma</td><td>Sagatavošanā</td><td>2000€</td><td>20.09.</td><td>🟢 Droši</td></tr>
-                        <tr><td>SIA Delta</td><td>Piedāvājums</td><td>4500€</td><td>25.09.</td><td>🟢 Droši</td></tr>
-                    </tbody>
-                </table>
+
+            <!-- Grafiki -->
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="bg-gray-700 h-32 rounded flex items-center justify-center">Apgrozījuma līkne</div>
+                <div class="bg-gray-700 h-32 rounded flex items-center justify-center">Margin dinamika</div>
             </div>
-            <div class="forms">
-                <h4>⚙️ Iekšējās formas</h4>
-                <ul>
-                    <li>-> Preču izrakstīšana</li>
-                    <li>-> Pasūtījuma ievade</li>
-                    <li>-> Atvaļinājuma pieteikums</li>
-                    <li>-> Garantijas pieteikums</li>
-                    <li>-> Tehniskais tickets</li>
-                    <li>-> Citas procedūras</li>
-                </ul>
+
+            <!-- Kalendārs un Aktivitātes -->
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-gray-700 p-4 rounded col-span-1">
+                    <h2 class="font-semibold mb-2">Kalendārs</h2>
+                    <p>10:00 Tikšanās ar SIA Opticom</p>
+                    <p>14:00 Zvans ar Klients A</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded col-span-2">
+                    <h2 class="font-semibold mb-2">Aktivitāšu saraksts</h2>
+                    <div class="bg-red-800 p-2 rounded mb-2">❗ Trūkstošais – SIA Demo</div>
+                    <div class="bg-green-800 p-2 rounded">✅ Zvans Klients Janis</div>
+                    <button class="mt-4 bg-red-700 hover:bg-red-600 px-4 py-2 rounded">+ Jaunā aktivitāte</button>
+                </div>
             </div>
-        </section>
-        <aside class="communication">
-            <p>📧 💬 🔒 📞 📅</p>
-        </aside>
-    </main>
-    <footer>
-        <p>FOOTER: versija, autortiesības, papildlinki</p>
-    </footer>
+        </main>
+    </div>
 </body>
 </html>
