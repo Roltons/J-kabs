@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <title>JEMA CRM Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <header class="bg-gray-800 p-4">
+        <div class="flex justify-between items-center">
+            <div class="text-lg font-bold">[CRM Logo]</div>
+            <nav class="space-x-4">
+                <a href="#" class="hover:underline">Dashboard</a>
+                <a href="#" class="hover:underline">Kontakti</a>
+                <a href="#" class="hover:underline">Darījumi</a>
+                <a href="#" class="hover:underline">Analītika</a>
+                <a href="#" class="hover:underline">Uzstādījumi</a>
+                <a href="#" class="hover:underline">Profils</a>
+            </nav>
+        </div>
+    </header>
+    <main class="flex h-screen">
+        <aside class="w-1/6 bg-gray-800 p-4">
+            <ul class="space-y-2">
+                <li>1. Klienti</li>
+                <li>2. Pārskats (Dashboard)</li>
+                <li>3. Mani uzdevumi</li>
+                <li>4. Zvani un tikšanās</li>
+                <li>5. Darījumi</li>
+                <li>6. Pārskati / Atskaites</li>
+                <li>7. Mārketings</li>
+            </ul>
+        </aside>
+        <section class="w-4/6 p-6 overflow-y-scroll">
+            <div class="grid grid-cols-3 gap-4 mb-6">
+                <div class="bg-blue-800 p-4 rounded text-center">Apgrozījums €</div>
+                <div class="bg-green-800 p-4 rounded text-center">Margin %</div>
+                <div class="bg-purple-800 p-4 rounded text-center">Tikšanās skaits</div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="bg-gray-700 p-6 rounded text-center">[ Apgrozījuma līkne ]</div>
+                <div class="bg-gray-700 p-6 rounded text-center">[ Margin dinamika ]</div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="bg-gray-800 p-4 rounded">
+                    <h4 class="font-bold mb-2">Mini nedēļas kalendārs</h4>
+                    <p>P O T C Pk S Sv</p>
+                    <p>2 3 4 5 6 7 8</p>
+                    <p>● ○ ●</p>
+                </div>
+                <div class="bg-gray-800 p-4 rounded">
+                    <h4 class="font-bold mb-2">Nākamie uzdevumi:</h4>
+                    <ul class="space-y-1">
+                        <li>🔴 Pabeigt atskaiti (31.08)</li>
+                        <li>🟡 Nosūtīt piedāvājumu (05.09)</li>
+                        <li>🟢 Sagatavot prezentāciju (20.09)</li>
+                        <li>🟢 Tikšanās ar klientu B (21.09)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mb-6">
+                <h4 class="font-bold mb-2">Plānotie darījumi</h4>
+                <table class="w-full text-left border border-gray-600">
+                    <thead>
+                        <tr class="bg-gray-700">
+                            <th class="p-2 border border-gray-600">Klients</th>
+                            <th class="p-2 border border-gray-600">Statuss</th>
+                            <th class="p-2 border border-gray-600">Summa</th>
+                            <th class="p-2 border border-gray-600">Termiņš</th>
+                            <th class="p-2 border border-gray-600">Progress</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-2 border border-gray-600">SIA Alfa</td>
+                            <td class="p-2 border border-gray-600">Pārskatē</td>
+                            <td class="p-2 border border-gray-600">5000€</td>
+                            <td class="p-2 border border-gray-600">01.09.</td>
+                            <td class="p-2 border border-gray-600">🔴 Nokavēts</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2 border border-gray-600">SIA Beta</td>
+                            <td class="p-2 border border-gray-600">Sarunās</td>
+                            <td class="p-2 border border-gray-600">8000€</td>
+                            <td class="p-2 border border-gray-600">05.09.</td>
+                            <td class="p-2 border border-gray-600">🟡 Steidzami</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2 border border-gray-600">SIA Gamma</td>
+                            <td class="p-2 border border-gray-600">Sagatavošanā</td>
+                            <td class="p-2 border border-gray-600">2000€</td>
+                            <td class="p-2 border border-gray-600">20.09.</td>
+                            <td class="p-2 border border-gray-600">🟢 Droši</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2 border border-gray-600">SIA Delta</td>
+                            <td class="p-2 border border-gray-600">Piedāvājums</td>
+                            <td class="p-2 border border-gray-600">4500€</td>
+                            <td class="p-2 border border-gray-600">25.09.</td>
+                            <td class="p-2 border border-gray-600">🟢 Droši</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bg-gray-800 p-4 rounded">
+                <h4 class="font-bold mb-2">⚙️ Iekšējās formas</h4>
+                <ul class="list-disc list-inside space-y-1">
+                    <li>Preču izrakstīšana</li>
+                    <li>Pasūtījuma ievade</li>
+                    <li>Atvaļinājuma pieteikums</li>
+                    <li>Garantijas pieteikums</li>
+                    <li>Tehniskais tickets</li>
+                    <li>Citas procedūras</li>
+                </ul>
+            </div>
+        </section>
+        <aside class="w-1/6 bg-gray-800 p-4 text-center space-y-4">
+            <p>📧</p>
+            <p>💬</p>
+            <p>🔒</p>
+            <p>📞</p>
+            <p>📅</p>
+        </aside>
+    </main>
+    <footer class="bg-gray-800 text-center p-2 text-sm">
+        FOOTER: versija, autortiesības, papildlinki
+    </footer>
+</body>
+</html>
